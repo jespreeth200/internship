@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Medical Insurance Premium Prediction</title>
+  </head>
+  <body>
+    <h1>Medical Insurance Premium Prediction</h1>
+    <form action="/predict" method="POST">
+
+      <label for="age">Age of Customer :</label>
+      <input type="number" id="age" name="age"><br><br>
+
+        <label for="diabetes">Does the Customer has Diabetes :</label>
+        <select name="diabetes" id="diabetes">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <label for="blood_pressure">Does the Customer has Blood Pressure Problems :</label>
+        <select name="blood_pressure" id="bp">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <label for="transplants">Does the Customer has Any Transplants :</label>
+        <select name="transplants" id="transplants">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <label for="chronic_diseases">Does the Customer has Any Chronic Diseases :</label>
+        <select name="chronic_diseases" id="chronic_diseases">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <label for="height">Height of Customer (in cm) :</label>
+        <input type="number" id="height" name="height"><br><br>
+
+        <label for="weight">Weight of Customer (in kg) :</label>
+        <input type="number" id="weight" name="weight"><br><br>
+
+        <label for="allergies">Does the Customer has Known Allergies :</label>
+        <select name="allergies" id="allergies">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <label for="cancer_history">Does the Customer has History Of Cancer In Family :</label>
+        <select name="cancer_history" id="cancer_history">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <label for="major_surgeries">Number Of Major Surgeries for Customer :</label>
+        <input type="number" id="major_surgeries" name="major_surgeries"><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+<h2>Prediction :</h2>
+{{prediction_text}}
+</body>
+</html>
